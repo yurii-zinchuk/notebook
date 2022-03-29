@@ -25,7 +25,7 @@ class Note:
         last_id += 1
         self.id = last_id
 
-    def match(self, filter: str) -> bool:
+    def match(self, filterr: str) -> bool:
         """Find whether note matches the search by memo or tags.
 
         Args:
@@ -34,7 +34,7 @@ class Note:
         Returns:
             bool: Whether matches.
         """
-        return filter in self.memo or filter in self.tags
+        return filterr in self.memo or filterr in self.tags
 
 
 class Notebook:
@@ -64,7 +64,7 @@ class Notebook:
             memo (str): New contents of the note.
         """
         for note in self.notes:
-            if note.id == note_id:
+            if str(note.id) == note_id:
                 note.memo = memo
                 break
 
