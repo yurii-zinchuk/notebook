@@ -75,7 +75,7 @@ class Notebook:
             tags (str): New tags of the note.
         """
         for note in self.notes:
-            if note.id == note_id:
+            if str(note.id) == note_id:
                 note.tags = tags
                 break
 
