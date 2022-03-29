@@ -11,7 +11,7 @@ class Note:
     A class to represent single Note.
     """
 
-    def __init__(self, memo: str, tags=''):
+    def __init__(self, memo: str, tags=""):
         """Initialize a note with its meno and tags.
 
         Args:
@@ -43,11 +43,10 @@ class Notebook:
     """
 
     def __init__(self):
-        """Initialize a notebook wiht empty list.
-        """
+        """Initialize a notebook wiht empty list."""
         self.notes = []
 
-    def new_note(self, memo: str, tags=''):
+    def new_note(self, memo: str, tags=""):
         """Create new note and add ot notebook.
 
         Args:
@@ -89,5 +88,4 @@ class Notebook:
         Returns:
             list: All notes that match.
         """
-        return [note for note in self.notes if
-                note.match(filterr)]
+        return [note for note in self.notes if note.match(filterr)]
