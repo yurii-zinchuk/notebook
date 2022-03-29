@@ -56,8 +56,11 @@ class Menu:
             notes = self.notebook.notes
         if notes:
             for note in notes:
-                print("{0}: {1}\n{2}\ncreated: {3}".format(
-                    note.id, note.tags, note.memo, note.creation_date))
+                print(
+                    "{0}: {1}\n{2}\ncreated: {3}".format(
+                        note.id, note.tags, note.memo, note.creation_date
+                    )
+                )
 
     def search_notes(self):
         """Searches notes in the notebook and show them."""
