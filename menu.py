@@ -51,11 +51,14 @@ class Menu:
         Args:
             notes (Note, optional): Note to show conctents. Defaults to None.
         """
-        if not notes:
+        if notes == []:
+            print('Not such note.')
+        elif notes is None:
             notes = self.notebook.notes
-        for note in notes:
-            print("{0}: {1}\n{2}".format(
-                note.id, note.tags, note.memo))
+        if notes:
+            for note in notes:
+                print("{0}: {1}\n{2}".format(
+                    note.id, note.tags, note.memo))
 
     def search_notes(self):
         """Searches notes in the notebook and show them.
@@ -74,13 +77,13 @@ class Menu:
     def modify_note(self):
         """Change memo or tags of the note.
         """
-        id = input("Enter a note id: ")
+        idd = input("Enter a note id: ")
         memo = input("Enter a memo: ")
         tags = input("Enter tags: ")
         if memo:
-            self.notebook.modify_memo(id, memo)
+            self.notebook.modify_memo(idd, memo)
         if tags:
-            self.notebook.modify_tags(id, tags)
+            self.notebook.modify_tags(idd, tags)
 
     def quit(self):
         """Stop the program.
