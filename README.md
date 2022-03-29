@@ -7,7 +7,7 @@ This is the studying project and an implementation of a Notebook porgram with te
 To start using the program just run the module 'menu.py' in the terminal:
 
 ```bash
-menu.py
+python3 menu.py
 ```
 
 And after that follow the instructions. You can add, and modify notes in your notebook. Also, you can search them by keywords and see their information.
